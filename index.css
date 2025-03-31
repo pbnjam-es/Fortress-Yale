@@ -1,0 +1,368 @@
+body {
+    background-color: black;
+    overflow-x: hidden;
+
+}
+
+#scrolly {
+    position: relative;
+    display: grid;
+    /* padding: 1rem; */
+  }
+
+  .scrolly-overlay {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    padding: 0;
+    /* max-width: 35rem; */
+    /* margin: 0 auto; */
+  }
+
+  .sticky-thing {
+    grid-column: 1;
+    grid-row: 1;
+    position: -webkit-sticky;
+    position: sticky;
+    display: grid;
+    /* left: 40%; */
+    width: 100%;
+    margin: 0;
+    z-index: -3;
+    top: -10%;
+    height: 150vh;
+    /* Center everything inside */
+    /* display: flex; */
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  
+    .beat {
+        position: relative;
+        overflow: hidden;
+        z-index: -1;
+        /* width: 40%; */
+        width: 100vw;
+        /* height: 600px; */
+        /* display: inline-grid; */
+        /* justify-content: center; */
+        /* grid-template-columns: 50% 50%; */
+        /* justify-content: center; */
+    }
+
+  .step {
+    margin: 0 auto 2rem auto;
+    margin-bottom: 25rem;
+    background-color: white;
+    color: black;
+    border: 3px solid goldenrod;
+  }
+
+  .step p {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.25rem;
+    /* border: black; */
+  }
+
+  /* .hidden { visibility: hidden; } */
+
+  /* When it's less than 700 pixels wide, do normal scrollytelling */
+  @media only screen and (min-width: 700px) {
+    #scrolly.side-by-side {
+      display: flex;
+    }
+
+    #scrolly.side-by-side > div {
+      flex-basis: 0;
+      flex-grow: 1;
+      flex-shrink: 1;
+      padding: 0.75em;
+    }
+
+    #scrolly.side-by-side .scrolly-overlay {
+      margin-top: 70vh;
+      order: 0;
+      /* Change these to adjust sizing options */
+      min-width: 15rem;
+      max-width: 20rem;
+    }
+
+    #scrolly.side-by-side .sticky-thing {
+      order: 1;
+      flex-grow: 2;
+    }
+  }
+
+
+.overall-map {
+    /* width: 25%; */
+    /* margin-left: 100px; */
+    /* margin-top: -100px; */
+    width: 100vw;
+    top: 2vw;
+    z-index: -2;
+    position: relative;
+}
+
+#overlay {
+    grid-column: 1;
+    grid-row: 1;   
+}
+
+#overall-map-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+#overall-map-2 {
+    filter: brightness(130%)
+}
+
+#map-shadow {
+    position: absolute;
+    top: 0; left: -10px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 65% 50%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1) 100%);
+}
+
+.ai2html-container {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    width: 13.1vw;
+    height: 11.8vw;
+    /* top: 58.712vh; */
+    /* left: 62vw; */
+    top: -55vh;
+    left: 59.1vw;
+    filter: brightness(1.2);
+}
+
+#title {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    width: 100%;
+    height: 600px;
+    color: white;
+    white-space: pre-line;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-bottom: 150px;
+
+}
+
+
+.Playfair {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+#subtitle {
+    margin-top: 70px;
+    
+    width: 30%;
+    margin-left: 35%;
+    /* position: absolute; */
+    align-self: center;
+    vertical-align: display;
+}
+
+hr {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    margin: 0;
+    border-width: 1px;
+    height: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#subtext {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    align-self: center;
+    font-weight: 400;
+}
+
+#title_img{
+    position: absolute;
+    /* margin-top: 500px; */
+    width: 100%;
+    z-index: -1;
+    filter: brightness(40%);
+}
+
+.fade {
+    top: 650px;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  }
+
+
+.text {
+    /* grid-row: 1; */
+    /* justify-self: left; */
+    margin-left: 8vw;
+    width: 30vw;
+    color: white;
+    align-self: center;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-line;
+    padding: 20px;
+}
+
+.sticky-text {
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 10;
+}
+/* 
+#unsticky-container-container {
+    height: 400vh;
+} */
+
+.building-name-text {
+    color: rgb(193	158	126);
+    font-weight: 700;
+    display: inline;
+}
+
+.unsticky-container {
+    /* position: sticky; */
+    overflow: hidden;
+    /* top: 300px; */
+}
+
+h1 {
+    font-size: 55px;
+    padding: 0px;
+    margin: 0px;
+}
+.media {
+    /* justify-self: right; */
+    /* grid-row: 2; */
+}
+
+tspan {
+    display: none;
+}
+
+#step-one {
+    margin-bottom: 200px;
+}
+
+#step-two {
+    /* margin-bottom: 300px; */
+    height: 300px;
+}
+
+#step-three {
+    margin-bottom: 200px;
+}
+#step-four {
+    margin-bottom: 200px;
+}
+#step-five {
+    margin-bottom: 200px;
+    /* height: 400px; */
+}
+#step-six {
+    margin-bottom: 200px;
+}
+#step-seven {
+    height: 200px;
+}
+#step-eight {
+    height: 200px;
+}
+#step-nine {
+    height: 200px;
+}
+
+#step-ten {
+    height: 200px;
+    margin-bottom: 200px;
+}
+#step-eleven {
+    margin-bottom: 200px;
+}
+#step-twelve {
+    margin-bottom: 200px;
+}
+#step-thirteen {
+    margin-bottom: 500px;
+}
+
+#old-new {
+    border: 2px solid white;
+    width: 60%;
+    rotate: -10deg;
+    margin-top: 150px;
+    margin-left: 50px;
+    z-index: 1;
+}
+
+.old-map {
+    /* width: 25%; */
+    /* margin-left: 100px; */
+    /* margin-top: -100px; */
+    border: 2px solid white;
+    z-index: -2;
+    position: relative;
+}
+
+#tomb_pic {
+    border: 2px solid white;
+    width: 60%;
+    rotate: 10deg;
+    margin-top: -100px;
+    margin-left: 200px;
+    z-index: 1;
+}
+
+#tomb_map {
+    margin-top: 100px;
+}
+
+#courtyard_plans {
+    border: 2px solid white;
+    width: 60%;
+    rotate: 10deg;
+    margin-top: 120px;
+    margin-left: 200px;
+    z-index: 1;
+}
+
+#shops_pic {
+    border: 2px solid white;
+    width: 60%;
+    rotate: 10deg;
+    margin-top: 100px;
+    margin-left: 200px;
+    z-index: 1;
+}
+
+#yale_police {
+    border: 2px solid white;
+    width: 60%;
+    rotate: 10deg;
+    margin-top: -40px;
+    margin-left: 200px;
+    z-index: 1;
+}
+
